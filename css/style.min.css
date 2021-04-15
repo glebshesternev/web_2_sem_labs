@@ -76,6 +76,30 @@ header button:hover {
 .choosen .info {
   width: 48%;
 }
+.choosen.hidden {
+  display: none;
+}
+
+.dwnld {
+  display: block;
+  text-align: center;
+  height: 80%;
+}
+.dwnld p {
+  color: #8592aa;
+  font-size: 25px;
+}
+.dwnld img {
+  width: 15%;
+  border: none;
+  border-radius: 10px;
+  padding: 15px 35px;
+  background-color: #8da8c5;
+  color: #444444;
+}
+.dwnld.hidden {
+  display: none;
+}
 
 .fav {
   display: grid;
@@ -107,12 +131,12 @@ header button:hover {
 .fav .city:nth-child(2n) {
   padding-left: 4%;
 }
-.fav form {
+.fav .form {
   display: flex;
   justify-content: flex-end;
   align-items: center;
 }
-.fav form input {
+.fav .form input {
   width: 50%;
   padding: 10px;
   border: none;
@@ -120,6 +144,7 @@ header button:hover {
   color: #000000;
   font-weight: bold;
   margin-right: 20px;
+  outline: none;
 }
 
 .info {
@@ -136,24 +161,45 @@ header button:hover {
 }
 
 .icon {
-  display: flex;
+  display: block;
+  background-image: url(../icons/lightshowers.png);
+  background-size: contain;
+  border: none;
   width: 150px;
   height: 150px;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  border: 0px;
-  padding: 20px;
-  font-size: 20px;
-  margin-top: 20px;
 }
 .icon.small {
-  display: inline-block;
   width: 50px;
-  height: auto;
-  font-size: 13px;
+  height: 50px;
   margin: 0;
   padding: 0;
+}
+.icon.clear_sky {
+  background-image: url(../icons/sunny.png);
+}
+.icon.few_clouds {
+  background-image: url(../icons/sunnyperiod.png);
+}
+.icon.scattered_clouds {
+  background-image: url(../icons/sunnyinterval.png);
+}
+.icon.broken_clouds {
+  background-image: url(../icons/overcast.png);
+}
+.icon.shower_rain {
+  background-image: url(../icons/lightshowers.png);
+}
+.icon.rain {
+  background-image: url(../icons/lightrain.png);
+}
+.icon.thunderstorm {
+  background-image: url(../icons/thunderstorms.png);
+}
+.icon.snow {
+  background-image: url(../icons/lightsnow.png);
+}
+.icon.mist {
+  background-image: url(../icons/fog.png);
 }
 
 .degs {
@@ -165,7 +211,7 @@ header button:hover {
   font-size: 40px;
 }
 
-.btn {
+.btn, .plus_btn {
   width: 32px;
   height: 32px;
   border-radius: 100%;
@@ -175,11 +221,15 @@ header button:hover {
   font-size: 20px;
   font-weight: 300;
 }
-.btn:hover {
+.btn:hover, .plus_btn:hover {
   background-color: rgba(146, 146, 146, 0.78);
 }
 
 @media (max-width: 768px) {
+  .dwnld {
+    width: 100%;
+  }
+
   body {
     padding: 5%;
   }

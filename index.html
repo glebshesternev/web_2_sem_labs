@@ -9,13 +9,14 @@
 <body>
 <header>
     <h1>Погода здесь</h1>
-    <button><img src="../web_2_sem_labs/refresh.png" class="refresh"><p>Обновить геолокацию</p></button>
+    <button id="refresh"><img src="refresh.png" class="refresh">
+        <p>Обновить геолокацию</p></button>
 </header>
 <main>
-    <div class="choosen">
+    <div class="choosen hidden">
         <div class="choosen_city">
-            <h3>Saint-Petersburg</h3>
-            <i class="icon"><img src="../web_2_sem_labs/weather_icon_m.png" class="weather_icon_m"></i>
+            <h3 id="main_city">Saint-Petersburg</h3>
+            <img class="icon">
             <span class="degs">8&degC</span>
         </div>
         <ul class="info">
@@ -24,7 +25,7 @@
                 <p>Moderate breeze, 6.0 m/s, North-northwes</p>
             </li>
             <li>
-                <p>Облачность</p>
+                <p>Описание</p>
                 <p>Broken clouds</p>
             </li>
             <li>
@@ -41,182 +42,19 @@
             </li>
         </ul>
     </div>
+    <div class="dwnld">
+        <p>Подождите, данные загружаются</p>
+        <img src="refresh.png">
+    </div>
     <div class="fav">
         <h2>Избранное</h2>
-        <form>
+        <div class="form">
             <input type="text" placeholder="Добавить новый город">
-            <button class="btn">+</button>
-        </form>
-        <div class="city">
-            <h3>Moscow</h3>
-            <span class="degs small">5&degC</span>
-            <i class="icon small"><img src="../web_2_sem_labs/weather_icon_s.png" class="weather_icon_s"></i>
-            <button class="btn">x</button>
-            <ul class="info">
-                <li>
-                    <p>Ветер</p>
-                    <p>Moderate breeze, 6.0 m/s, North-northwes</p>
-                </li>
-                <li>
-                    <p>Облачность</p>
-                    <p>Broken clouds</p>
-                </li>
-                <li>
-                    <p>Давление</p>
-                    <p>1013 hpa</p>
-                </li>
-                <li>
-                    <p>Влажность</p>
-                    <p>52 %</p>
-                </li>
-                <li>
-                    <p>Координаты</p>
-                    <p>[59.88, 30.42]</p>
-                </li>
-            </ul>
-        </div>
-        <div class="city">
-            <h3>Moscow</h3>
-            <span class="degs small">5&degC</span>
-            <i class="icon small"><img src="../web_2_sem_labs/weather_icon_s.png" class="weather_icon_s"></i>
-            <button class="btn">x</button>
-            <ul class="info">
-                <li>
-                    <p>Ветер</p>
-                    <p>Moderate breeze, 6.0 m/s, North-northwes</p>
-                </li>
-                <li>
-                    <p>Облачность</p>
-                    <p>Broken clouds</p>
-                </li>
-                <li>
-                    <p>Давление</p>
-                    <p>1013 hpa</p>
-                </li>
-                <li>
-                    <p>Влажность</p>
-                    <p>52 %</p>
-                </li>
-                <li>
-                    <p>Координаты</p>
-                    <p>[59.88, 30.42]</p>
-                </li>
-            </ul>
-        </div>
-        <div class="city">
-            <h3>Moscow</h3>
-            <span class="degs small">5&degC</span>
-            <i class="icon small"><img src="../web_2_sem_labs/weather_icon_s.png" class="weather_icon_s"></i>
-            <button class="btn">x</button>
-            <ul class="info">
-                <li>
-                    <p>Ветер</p>
-                    <p>Moderate breeze, 6.0 m/s, North-northwes</p>
-                </li>
-                <li>
-                    <p>Облачность</p>
-                    <p>Broken clouds</p>
-                </li>
-                <li>
-                    <p>Давление</p>
-                    <p>1013 hpa</p>
-                </li>
-                <li>
-                    <p>Влажность</p>
-                    <p>52 %</p>
-                </li>
-                <li>
-                    <p>Координаты</p>
-                    <p>[59.88, 30.42]</p>
-                </li>
-            </ul>
-        </div>
-        <div class="city">
-            <h3>Moscow</h3>
-            <span class="degs small">5&degC</span>
-            <i class="icon small"><img src="../web_2_sem_labs/weather_icon_s.png" class="weather_icon_s"></i>
-            <button class="btn">x</button>
-            <ul class="info">
-                <li>
-                    <p>Ветер</p>
-                    <p>Moderate breeze, 6.0 m/s, North-northwes</p>
-                </li>
-                <li>
-                    <p>Облачность</p>
-                    <p>Broken clouds</p>
-                </li>
-                <li>
-                    <p>Давление</p>
-                    <p>1013 hpa</p>
-                </li>
-                <li>
-                    <p>Влажность</p>
-                    <p>52 %</p>
-                </li>
-                <li>
-                    <p>Координаты</p>
-                    <p>[59.88, 30.42]</p>
-                </li>
-            </ul>
-        </div>
-        <div class="city">
-            <h3>Moscow</h3>
-            <span class="degs small">5&degC</span>
-            <i class="icon small"><img src="../web_2_sem_labs/weather_icon_s.png" class="weather_icon_s"></i>
-            <button class="btn">x</button>
-            <ul class="info">
-                <li>
-                    <p>Ветер</p>
-                    <p>Moderate breeze, 6.0 m/s, North-northwes</p>
-                </li>
-                <li>
-                    <p>Облачность</p>
-                    <p>Broken clouds</p>
-                </li>
-                <li>
-                    <p>Давление</p>
-                    <p>1013 hpa</p>
-                </li>
-                <li>
-                    <p>Влажность</p>
-                    <p>52 %</p>
-                </li>
-                <li>
-                    <p>Координаты</p>
-                    <p>[59.88, 30.42]</p>
-                </li>
-            </ul>
-        </div>
-        <div class="city">
-            <h3>Moscow</h3>
-            <span class="degs small">5&degC</span>
-            <i class="icon small"><img src="../web_2_sem_labs/weather_icon_s.png" class="weather_icon_s"></i>
-            <button class="btn">x</button>
-            <ul class="info">
-                <li>
-                    <p>Ветер</p>
-                    <p>Moderate breeze, 6.0 m/s, North-northwes</p>
-                </li>
-                <li>
-                    <p>Облачность</p>
-                    <p>Broken clouds</p>
-                </li>
-                <li>
-                    <p>Давление</p>
-                    <p>1013 hpa</p>
-                </li>
-                <li>
-                    <p>Влажность</p>
-                    <p>52 %</p>
-                </li>
-                <li>
-                    <p>Координаты</p>
-                    <p>[59.88, 30.42]</p>
-                </li>
-            </ul>
+            <button class="plus_btn">+</button>
         </div>
     </div>
 </main>
 <footer></footer>
+<script src="js/main.js"></script>
 </body>
 </html>
